@@ -1,0 +1,32 @@
+<%= form_for(opt) do |f| %>
+  <% if opt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(opt.errors.count, "error") %> prohibited this opt from being saved:</h2>
+
+      <ul>
+      <% opt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :class %>
+    <%= f.text_field :class %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user %>
+    <%= f.text_field :user %>
+  </div>
+
+  <div class="field">
+    <%= f.label :adjective_id %>
+    <%= f.text_field :adjective_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

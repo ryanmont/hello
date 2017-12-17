@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Class:</strong>
+  <%= @opt.class %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @opt.user %>
+</p>
+
+<p>
+  <strong>Adjective:</strong>
+  <%= @opt.adjective %>
+</p>
+
+<%= link_to 'Edit', edit_opt_path(@opt) %> |
+<%= link_to 'Back', opts_path %>

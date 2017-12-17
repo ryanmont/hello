@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1><center>Names</center></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>List of Names</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @firsts.each do |first| %>
+      <tr>
+        <td><%= first.first_name %></td>
+        <td><%= link_to 'Show', first %></td>
+        <td><%= link_to 'Edit', edit_first_path(first) %></td>
+        <td><%= link_to 'Destroy', first, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<hr>
+
+<br>
+<hr>
+
+
+<%= link_to '<button type="button">Click here to Add a New Name </button>'.html_safe, new_first_path %>
+
+
